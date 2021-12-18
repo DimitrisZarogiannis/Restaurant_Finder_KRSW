@@ -1,6 +1,7 @@
 # Application execution window 
 # User inputs functionality
 
+from re import findall
 from scripts.sparql_query import restaurant_query
 
 
@@ -13,7 +14,7 @@ def inputs():
 
 def printer(out):
     for x in out:
-        print(x)
+        print(x[0],f' | {x[1]} meters from the city centre |')
 
 if __name__== "__main__":
     out = inputs()
